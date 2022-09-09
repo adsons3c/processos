@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{ form.as_p }}
+
+    <h2> Lista de equipamentos</h2>
+    {% for eq in equipamentos %}
+    <li>
+        <a href="{% url 'detalhes_equipamentos' eq.id %}">{{ eq }}</a>
+    </li>
+    {% endfor %}
+
+    
+
+</body>
+</html>
